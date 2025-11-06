@@ -1,0 +1,22 @@
+header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+footer {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
