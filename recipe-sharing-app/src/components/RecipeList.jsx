@@ -7,13 +7,12 @@ const RecipeList = () => {
   const filteredRecipes = useRecipeStore(state => state.filteredRecipes);
   const searchTerm = useRecipeStore(state => state.searchTerm);
   const filterRecipes = useRecipeStore(state => state.filterRecipes);
+  const favorites = useRecipeStore(state => state.favorites); // ⭐ NEW
 
-  // Initial filter when component mounts or recipes change
   useEffect(() => {
     filterRecipes();
   }, [recipes, filterRecipes]);
 
-  // Determine which recipes to display
   const recipesToDisplay = searchTerm ? filteredRecipes : recipes;
 
   return (
@@ -70,65 +69,86 @@ const RecipeList = () => {
           display: 'grid', 
           gap: '15px' 
         }}>
-          {recipesToDisplay.map(recipe => (
-            <div 
-              key={recipe.id} 
-              style={{
-                border: '2px solid #4CAF50',
-                borderRadius: '12px',
-                padding: '20px',
-                backgroundColor: '#f9f9f9',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-              }}
-            >
-              <h3 style={{ 
-                color: '#4CAF50', 
-                marginTop: 0,
-                fontSize: '1.5em'
-              }}>
-                🍳 {recipe.title}
-              </h3>
-              <p style={{ 
-                color: '#666',
-                lineHeight: '1.6',
-                marginBottom: '15px'
-              }}>
-                {recipe.description.length > 150 
-                  ? `${recipe.description.substring(0, 150)}...` 
-                  : recipe.description
-                }
-              </p>
-              
-              {/* Link to view full details */}
-              <Link 
-                to={`/recipe/${recipe.id}`}
+          {recipesToDisplay.map(recipe => {
+            const isFavorite = favorites.includes(recipe.id); // ⭐ Check if favorite
+            
+            return (
+              <div 
+                key={recipe.id} 
                 style={{
-                  display: 'inline-block',
-                  padding: '10px 20px',
-                  backgroundColor: '#2196F3',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontSize: '14px',
-                  fontWeight: 'bold',
-                  transition: 'background-color 0.3s'
+                  border: isFavorite ? '2px solid #ff9800' : '2px solid #4CAF50',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  backgroundColor: isFavorite ? '#fff3e0' : '#f9f9f9',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  position: 'relative'
                 }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#1976D2'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = '#2196F3'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                }}
               >
-                👁️ View Details →
-              </Link>
-            </div>
-          ))}
+                {/* ⭐ Favorite Badge */}
+                {isFavorite && (
+                  <span style={{
+                    position: 'absolute',
+                    top: '15px',
+                    right: '15px',
+                    backgroundColor: '#ff9800',
+                    color: 'white',
+                    padding: '5px 10px',
+                    borderRadius: '15px',
+                    fontSize: '12px',
+                    fontWeight: 'bold'
+                  }}>
+                    ⭐ Favorite
+                  </span>
+                )}
+
+                <h3 style={{ 
+                  color: isFavorite ? '#e65100' : '#4CAF50',
+                  marginTop: 0,
+                  fontSize: '1.5em'
+                }}>
+                  🍳 {recipe.title}
+                </h3>
+                <p style={{ 
+                  color: '#666',
+                  lineHeight: '1.6',
+                  marginBottom: '15px'
+                }}>
+                  {recipe.description.length > 150 
+                    ? `${recipe.description.substring(0, 150)}...` 
+                    : recipe.description
+                  }
+                </p>
+                
+                <Link 
+                  to={`/recipe/${recipe.id}`}
+                  style={{
+                    display: 'inline-block',
+                    padding: '10px 20px',
+                    backgroundColor: '#2196F3',
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    transition: 'background-color 0.3s'
+                  }}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#1976D2'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#2196F3'}
+                >
+                  👁️ View Details →
+                </Link>
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

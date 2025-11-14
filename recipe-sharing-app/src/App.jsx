@@ -3,6 +3,8 @@ import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 import './App.css';
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
     <Router>
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
         <Routes>
-          {/* Home Page - List all recipes with search */}
+          {/* Home Page */}
           <Route path="/" element={
             <>
               {/* Header */}
@@ -24,17 +26,23 @@ function App() {
                   👨‍🍳 Recipe Sharing App
                 </h1>
                 <p style={{ color: '#666', fontSize: '1.2em' }}>
-                  Share your favorite recipes with the world!
+                  Share, search, and save your favorite recipes!
                 </p>
               </header>
 
-              {/* Search Bar - NEW! */}
+              {/* Search Bar */}
               <SearchBar />
               
               {/* Add Recipe Form */}
               <AddRecipeForm />
 
-              {/* Recipe List (now shows filtered results) */}
+              {/* ⭐ NEW: Favorites Section */}
+              <FavoritesList />
+
+              {/* 💡 NEW: Recommendations Section */}
+              <RecommendationsList />
+
+              {/* Recipe List */}
               <RecipeList />
             </>
           } />
