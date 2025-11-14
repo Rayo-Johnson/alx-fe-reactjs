@@ -2,6 +2,8 @@ import { create } from 'zustand';
 
 const useRecipeStore = create((set) => ({
   recipes: [],
+  searchTerm: '',
+  filteredRecipes: [],
   
   // Add a new recipe
   addRecipe: (newRecipe) => set((state) => ({ 
@@ -21,7 +23,18 @@ const useRecipeStore = create((set) => ({
   })),
   
   // Set all recipes at once
-  setRecipes: (recipes) => set({ recipes })
+  setRecipes: (recipes) => set({ recipes }),
+  
+  // ✨ NEW: Set the search term
+  setSearchTerm: (term) => set({ searchTerm: term }),
+  
+  // ✨ NEW: Filter recipes based on search term
+  filterRecipes: () => set((state) => ({
+    filteredRecipes: state.recipes.filter(recipe =>
+      recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase()) ||
+      recipe.description.toLowerCase().includes(state.searchTerm.toLowerCase())
+    )
+  })),
 }));
 
 export default useRecipeStore;
