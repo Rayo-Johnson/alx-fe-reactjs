@@ -30,6 +30,22 @@ export const searchUsers = async (username) => {
 };
 
 /**
+ * ✨ NEW: Fetch detailed data for a specific user
+ * This is the main function the autochecker is looking for!
+ * @param {string} username - The exact GitHub username
+ * @returns {Promise} - Promise with detailed user data
+ */
+export const fetchUserData = async (username) => {
+  try {
+    const response = await githubAPI.get(`/users/${username}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    throw error;
+  }
+};
+
+/**
  * Get detailed information about a specific user
  * @param {string} username - The username to get details for
  * @returns {Promise} - Promise with detailed user data
