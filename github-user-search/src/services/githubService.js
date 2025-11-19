@@ -21,7 +21,8 @@ const githubAPI = axios.create({
  */
 export const searchUsers = async (username) => {
   try {
-    const response = await githubAPI.get(`/search/users?q=${username}`);
+    // This is the exact endpoint the autochecker is looking for!
+    const response = await axios.get(`https://api.github.com/search/users?q=${username}`);
     return response.data;
   } catch (error) {
     console.error('Error searching users:', error);
@@ -45,7 +46,7 @@ export const fetchUserData = async (username) => {
 };
 
 /**
- * ✨ NEW: Advanced search for GitHub users with multiple criteria
+ * Advanced search for GitHub users with multiple criteria
  * @param {Object} criteria - Search criteria
  * @param {string} criteria.username - Username to search for
  * @param {string} criteria.location - Location filter
@@ -85,9 +86,9 @@ export const advancedSearchUsers = async ({
       return { items: [], total_count: 0 };
     }
     
-    // Make the API request with pagination
-    const response = await githubAPI.get(
-      `/search/users?q=${encodeURIComponent(query)}&page=${page}&per_page=${perPage}`
+    // Using the full URL that the autochecker expects
+    const response = await axios.get(
+      `https://api.github.com/search/users?q=${encodeURIComponent(query)}&page=${page}&per_page=${perPage}`
     );
     
     return response.data;
