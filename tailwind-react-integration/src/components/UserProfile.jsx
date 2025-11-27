@@ -5,7 +5,7 @@ function UserProfile() {
       <img 
         src="https://via.placeholder.com/150" 
         alt="User" 
-        className="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto border-4 border-blue-500"
+        className="rounded-full w-24 h-24 sm:w-24 sm:h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto border-4 border-blue-500"
       />
       
       {/* Responsive Heading */}
