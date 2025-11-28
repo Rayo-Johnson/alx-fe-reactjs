@@ -8,12 +8,12 @@ function UserProfile() {
         className="rounded-full w-24 h-24 sm:w-24 sm:h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto border-4 border-blue-500"
       />
       
-      {/* Responsive Heading */}
-      <h1 className="text-lg sm:text-xl md:text-2xl text-blue-800 my-3 sm:my-4 text-center font-bold">
+     {/* Interactive Heading with Hover Color Change */}
+      <h1 className="text-lg sm:text-xl md:text-2xl text-blue-800 hover:text-blue-500 my-3 sm:my-4 text-center font-bold transition-colors duration-300 ease-in-out cursor-pointer">
         John Doe
       </h1>
       
-      {/* Responsive Paragraph */}
+      {/* Paragraph */}
       <p className="text-sm sm:text-base md:text-lg text-gray-600 text-center leading-relaxed">
         Developer at Example Co. Loves to write code and explore new technologies.
       </p>
