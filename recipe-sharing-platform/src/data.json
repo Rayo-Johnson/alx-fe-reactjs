@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Spaghetti+Carbonara"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Chicken+Tikka"
+  },
+  {
+    "id": 3,
+    "title": "Caesar Salad",
+    "summary": "A green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
+    "image": "https://via.placeholder.com/300x200/95E1D3/FFFFFF?text=Caesar+Salad"
+  },
+  {
+    "id": 4,
+    "title": "Chocolate Lava Cake",
+    "summary": "A rich chocolate cake with a warm, gooey center that flows like lava when you cut into it.",
+    "image": "https://via.placeholder.com/300x200/F38181/FFFFFF?text=Lava+Cake"
+  },
+  {
+    "id": 5,
+    "title": "Beef Tacos",
+    "summary": "Crispy corn tortillas filled with seasoned ground beef, lettuce, cheese, and salsa.",
+    "image": "https://via.placeholder.com/300x200/AA96DA/FFFFFF?text=Beef+Tacos"
+  },
+  {
+    "id": 6,
+    "title": "Vegetable Stir Fry",
+    "summary": "A colorful mix of fresh vegetables stir-fried in a savory sauce with garlic and ginger.",
+    "image": "https://via.placeholder.com/300x200/FCBAD3/FFFFFF?text=Stir+Fry"
+  },
+  {
+    "id": 7,
+    "title": "Pancakes",
+    "summary": "Fluffy buttermilk pancakes served with maple syrup and butter.",
+    "image": "https://via.placeholder.com/300x200/FFFFD2/333333?text=Pancakes"
+  },
+  {
+    "id": 8,
+    "title": "Greek Moussaka",
+    "summary": "A layered casserole of eggplant, ground meat, and béchamel sauce, baked to perfection.",
+    "image": "https://via.placeholder.com/300x200/A8D8EA/FFFFFF?text=Moussaka"
+  }
+]
