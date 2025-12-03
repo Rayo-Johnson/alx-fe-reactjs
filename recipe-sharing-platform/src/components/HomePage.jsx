@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Add this import
 import recipeData from '../data.json';
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    // Load recipe data when component mounts
     setRecipes(recipeData);
   }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
-      {/* Header */}
+      {/* Header - same as before */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -28,9 +28,7 @@ const HomePage = () => {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        {/* Page Title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Discover Delicious Recipes 👨‍🍳
@@ -40,14 +38,13 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* Recipe Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {recipes.map((recipe) => (
-            <div
+            <Link
               key={recipe.id}
+              to={`/recipe/${recipe.id}`}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
-              {/* Recipe Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={recipe.image}
@@ -59,7 +56,6 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* Recipe Content */}
               <div className="p-5">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-orange-600 transition-colors">
                   {recipe.title}
@@ -68,16 +64,14 @@ const HomePage = () => {
                   {recipe.summary}
                 </p>
 
-                {/* Action Button */}
                 <button className="w-full bg-orange-100 hover:bg-orange-600 text-orange-600 hover:text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300">
                   View Recipe →
                 </button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* Empty State (if no recipes) */}
         {recipes.length === 0 && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🍽️</div>
@@ -91,7 +85,6 @@ const HomePage = () => {
         )}
       </main>
 
-      {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-center text-gray-600">

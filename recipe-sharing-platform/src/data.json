@@ -3,48 +3,256 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Spaghetti+Carbonara"
+    "image": "https://via.placeholder.com/400x300/FF6B6B/FFFFFF?text=Spaghetti+Carbonara",
+    "ingredients": [
+      "400g spaghetti",
+      "200g pancetta or bacon, diced",
+      "4 large eggs",
+      "100g Parmesan cheese, grated",
+      "2 cloves garlic, minced",
+      "Salt and black pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil and cook spaghetti according to package directions.",
+      "While pasta cooks, fry pancetta in a large skillet until crispy.",
+      "In a bowl, whisk together eggs, Parmesan cheese, and black pepper.",
+      "Drain pasta, reserving 1 cup of pasta water.",
+      "Remove skillet from heat, add pasta to pancetta.",
+      "Quickly stir in egg mixture, adding pasta water as needed to create a creamy sauce.",
+      "Serve immediately with extra Parmesan and parsley."
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "15 minutes",
+    "servings": 4,
+    "difficulty": "Medium"
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Chicken+Tikka"
+    "image": "https://via.placeholder.com/400x300/4ECDC4/FFFFFF?text=Chicken+Tikka",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup yogurt",
+      "2 tbsp tikka masala spice",
+      "400ml coconut cream",
+      "400g crushed tomatoes",
+      "1 onion, diced",
+      "3 cloves garlic, minced",
+      "1 inch ginger, grated",
+      "2 tbsp butter",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and half the tikka masala spice for 30 minutes.",
+      "Heat butter in a large pan and cook onion until soft.",
+      "Add garlic and ginger, cook for 1 minute.",
+      "Add remaining spices and cook until fragrant.",
+      "Add crushed tomatoes and simmer for 10 minutes.",
+      "Grill or pan-fry marinated chicken until cooked through.",
+      "Add chicken to sauce with coconut cream.",
+      "Simmer for 10 minutes and garnish with cilantro."
+    ],
+    "prepTime": "40 minutes",
+    "cookTime": "30 minutes",
+    "servings": 4,
+    "difficulty": "Medium"
   },
   {
     "id": 3,
     "title": "Caesar Salad",
     "summary": "A green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
-    "image": "https://via.placeholder.com/300x200/95E1D3/FFFFFF?text=Caesar+Salad"
+    "image": "https://via.placeholder.com/400x300/95E1D3/FFFFFF?text=Caesar+Salad",
+    "ingredients": [
+      "2 heads romaine lettuce, chopped",
+      "1 cup croutons",
+      "1/2 cup Parmesan cheese, shaved",
+      "2 cloves garlic",
+      "2 anchovy fillets",
+      "1 egg yolk",
+      "2 tbsp lemon juice",
+      "1 tsp Dijon mustard",
+      "1/2 cup olive oil",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Make the dressing: Mash garlic and anchovies into a paste.",
+      "Whisk in egg yolk, lemon juice, and Dijon mustard.",
+      "Slowly drizzle in olive oil while whisking constantly.",
+      "Season with salt and pepper.",
+      "Toss romaine lettuce with dressing.",
+      "Add croutons and Parmesan cheese.",
+      "Serve immediately."
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "0 minutes",
+    "servings": 4,
+    "difficulty": "Easy"
   },
   {
     "id": 4,
     "title": "Chocolate Lava Cake",
     "summary": "A rich chocolate cake with a warm, gooey center that flows like lava when you cut into it.",
-    "image": "https://via.placeholder.com/300x200/F38181/FFFFFF?text=Lava+Cake"
+    "image": "https://via.placeholder.com/400x300/F38181/FFFFFF?text=Lava+Cake",
+    "ingredients": [
+      "100g dark chocolate, chopped",
+      "100g butter",
+      "2 eggs",
+      "2 egg yolks",
+      "50g sugar",
+      "2 tbsp flour",
+      "Pinch of salt",
+      "Butter and cocoa for ramekins",
+      "Vanilla ice cream for serving"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Butter and dust 4 ramekins with cocoa powder.",
+      "Melt chocolate and butter together, stirring until smooth.",
+      "Whisk eggs, egg yolks, and sugar until thick and pale.",
+      "Fold chocolate mixture into eggs.",
+      "Sift in flour and salt, fold gently.",
+      "Divide batter among ramekins.",
+      "Bake for 12-14 minutes until edges are set but center jiggles.",
+      "Let cool for 1 minute, then invert onto plates.",
+      "Serve immediately with vanilla ice cream."
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "14 minutes",
+    "servings": 4,
+    "difficulty": "Medium"
   },
   {
     "id": 5,
     "title": "Beef Tacos",
     "summary": "Crispy corn tortillas filled with seasoned ground beef, lettuce, cheese, and salsa.",
-    "image": "https://via.placeholder.com/300x200/AA96DA/FFFFFF?text=Beef+Tacos"
+    "image": "https://via.placeholder.com/400x300/AA96DA/FFFFFF?text=Beef+Tacos",
+    "ingredients": [
+      "500g ground beef",
+      "1 packet taco seasoning",
+      "8 taco shells",
+      "1 cup lettuce, shredded",
+      "1 cup cheddar cheese, shredded",
+      "1 tomato, diced",
+      "1/2 cup sour cream",
+      "1/2 cup salsa",
+      "1/4 cup cilantro, chopped"
+    ],
+    "instructions": [
+      "Brown ground beef in a skillet over medium-high heat.",
+      "Drain excess fat.",
+      "Add taco seasoning and water according to package directions.",
+      "Simmer for 5 minutes until thickened.",
+      "Warm taco shells according to package directions.",
+      "Fill each shell with beef mixture.",
+      "Top with lettuce, cheese, tomato, sour cream, and salsa.",
+      "Garnish with cilantro and serve."
+    ],
+    "prepTime": "10 minutes",
+    "cookTime": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy"
   },
   {
     "id": 6,
     "title": "Vegetable Stir Fry",
     "summary": "A colorful mix of fresh vegetables stir-fried in a savory sauce with garlic and ginger.",
-    "image": "https://via.placeholder.com/300x200/FCBAD3/FFFFFF?text=Stir+Fry"
+    "image": "https://via.placeholder.com/400x300/FCBAD3/FFFFFF?text=Stir+Fry",
+    "ingredients": [
+      "2 cups broccoli florets",
+      "1 red bell pepper, sliced",
+      "1 cup snap peas",
+      "1 carrot, julienned",
+      "3 cloves garlic, minced",
+      "1 inch ginger, grated",
+      "3 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 tbsp cornstarch",
+      "2 tbsp vegetable oil",
+      "Sesame seeds for garnish"
+    ],
+    "instructions": [
+      "Mix soy sauce, sesame oil, and cornstarch in a small bowl.",
+      "Heat vegetable oil in a wok or large skillet over high heat.",
+      "Add garlic and ginger, stir-fry for 30 seconds.",
+      "Add broccoli and carrot, stir-fry for 3 minutes.",
+      "Add bell pepper and snap peas, stir-fry for 2 minutes.",
+      "Pour in sauce mixture and toss to coat vegetables.",
+      "Cook for 1 minute until sauce thickens.",
+      "Garnish with sesame seeds and serve over rice."
+    ],
+    "prepTime": "15 minutes",
+    "cookTime": "10 minutes",
+    "servings": 4,
+    "difficulty": "Easy"
   },
   {
     "id": 7,
     "title": "Pancakes",
     "summary": "Fluffy buttermilk pancakes served with maple syrup and butter.",
-    "image": "https://via.placeholder.com/300x200/FFFFD2/333333?text=Pancakes"
+    "image": "https://via.placeholder.com/400x300/FFFFD2/333333?text=Pancakes",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "2 tbsp sugar",
+      "2 tsp baking powder",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "2 cups buttermilk",
+      "2 eggs",
+      "1/4 cup melted butter",
+      "Maple syrup for serving",
+      "Butter for serving"
+    ],
+    "instructions": [
+      "Mix flour, sugar, baking powder, baking soda, and salt in a large bowl.",
+      "In another bowl, whisk buttermilk, eggs, and melted butter.",
+      "Pour wet ingredients into dry ingredients and mix until just combined (lumps are okay).",
+      "Heat a griddle or skillet over medium heat and lightly grease.",
+      "Pour 1/4 cup batter for each pancake.",
+      "Cook until bubbles form on surface, about 2-3 minutes.",
+      "Flip and cook until golden brown, about 2 minutes more.",
+      "Serve hot with maple syrup and butter."
+    ],
+    "prepTime": "10 minutes",
+    "cookTime": "20 minutes",
+    "servings": 4,
+    "difficulty": "Easy"
   },
   {
     "id": 8,
     "title": "Greek Moussaka",
     "summary": "A layered casserole of eggplant, ground meat, and béchamel sauce, baked to perfection.",
-    "image": "https://via.placeholder.com/300x200/A8D8EA/FFFFFF?text=Moussaka"
+    "image": "https://via.placeholder.com/400x300/A8D8EA/FFFFFF?text=Moussaka",
+    "ingredients": [
+      "2 large eggplants, sliced",
+      "500g ground lamb or beef",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "400g crushed tomatoes",
+      "1 tsp cinnamon",
+      "3 tbsp butter",
+      "3 tbsp flour",
+      "2 cups milk",
+      "2 eggs",
+      "100g Parmesan cheese",
+      "Olive oil for frying"
+    ],
+    "instructions": [
+      "Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.",
+      "Fry eggplant slices in olive oil until golden. Set aside.",
+      "Cook ground meat with onion and garlic until browned.",
+      "Add crushed tomatoes and cinnamon, simmer for 20 minutes.",
+      "Make béchamel: Melt butter, add flour, cook for 1 minute.",
+      "Gradually whisk in milk, cook until thickened.",
+      "Remove from heat, whisk in eggs and Parmesan.",
+      "Layer eggplant, meat sauce, and béchamel in a baking dish.",
+      "Bake at 180°C (350°F) for 45 minutes until golden.",
+      "Let rest for 10 minutes before serving."
+    ],
+    "prepTime": "45 minutes",
+    "cookTime": "60 minutes",
+    "servings": 6,
+    "difficulty": "Hard"
   }
 ]
