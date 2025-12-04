@@ -15,19 +15,18 @@ const AddRecipeForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  // Handle input changes
+  // Handle input changes - UPDATED to use e.target.value directly
   const handleChange = (e) => {
-    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [e.target.name]: e.target.value
     }));
     
     // Clear error for this field when user starts typing
-    if (errors[name]) {
+    if (errors[e.target.name]) {
       setErrors(prev => ({
         ...prev,
-        [name]: ''
+        [e.target.name]: ''
       }));
     }
   };
