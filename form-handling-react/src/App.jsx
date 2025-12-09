@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import RegistrationForm from './components/RegistrationForm';
-import FormikForm from './components/formikForm.jsx';
+import FormikForm from './components/formikForm';
 
 function App() {
   const [currentForm, setCurrentForm] = useState('controlled');
