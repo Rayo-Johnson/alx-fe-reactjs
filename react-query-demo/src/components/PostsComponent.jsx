@@ -15,7 +15,7 @@ const fetchPosts = async () => {
 const PostsComponent = () => {
   const [showComponent, setShowComponent] = useState(true);
 
-  // Using React Query's useQuery hook
+  // Using React Query's useQuery hook with configuration options
   const { 
     data: posts, 
     isLoading, 
@@ -27,6 +27,10 @@ const PostsComponent = () => {
   } = useQuery({
     queryKey: ['posts'], // Unique key for this query
     queryFn: fetchPosts, // Function to fetch data
+    staleTime: 1000 * 60 * 5, // Data is fresh for 5 minutes
+    cacheTime: 1000 * 60 * 10, // Cache persists for 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+    keepPreviousData: true, // Keep previous data while fetching new data
   });
 
   // Loading state
