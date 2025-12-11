@@ -8,7 +8,14 @@ module.exports = {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
   testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
+    '<rootDir>/src/__tests__/**/*.{js,jsx}',
+    '<rootDir>/src/components/__tests__/**/*.{js,jsx}',
     '**/?(*.)+(spec|test).[jt]s?(x)'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx}',
+    '!src/main.jsx',
+    '!src/**/*.test.{js,jsx}',
+    '!src/setupTests.js',
   ],
 };
